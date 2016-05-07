@@ -15,3 +15,4 @@ before_build:
     $doc.Save($config)
 
 - nuget restore
+- cd EvilPlanner.Next && npm install && npm run webpack
