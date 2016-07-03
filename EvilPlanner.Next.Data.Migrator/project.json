@@ -4,24 +4,26 @@
         "compilerName": "fsc",
         "compile": {
             "includeFiles": [
-                "Quotation.fs",
-                "Context.fs"
+                "Migrations/V1_CreateQuotationsTable.fs",
+                "Program.fs"
             ]
-        }
+        },
+        "emitEntryPoint": true
     },
     "dependencies": {
         "Microsoft.FSharp.Core.netcore": "1.0.0-alpha-160509",
         "FluentMigrator": "1.6.2"
     },
     "tools": {
-        "dotnet-compile-fsc": {
-            "version": "1.0.0-preview2-*",
-            "imports": [
-                "dnxcore50",
-                "portable-net45+win81",
-                "netstandard1.3"
-            ]
-        }
+        "dotnet-compile-fsc": "1.0.0-preview2-*"
+        //"dotnet-compile-fsc": {
+        //    "version": "1.0.0-preview2-*",
+        //    "imports": [
+        //        "dnxcore50",
+        //        "portable-net45+win81",
+        //        "netstandard1.3"
+        //    ]
+        //}
     },
     "frameworks": {
         "netcoreapp1.0": {
@@ -29,11 +31,13 @@
                 "Microsoft.NETCore.App": {
                     "type": "platform",
                     "version": "1.0.0"
-                }
+                },
+                "System.Runtime": "*"
             },
             "imports": [
                 "portable-net45+win8",
-                "dnxcore50"
+                "dnxcore50",
+                "net40"
             ]
         }
     }
