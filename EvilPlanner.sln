@@ -20,8 +20,6 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EvilPlanner.Tests", "EvilPl
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EvilPlanner.Backend", "EvilPlanner.Backend\EvilPlanner.Backend.fsproj", "{67FDBABF-7E9D-4CDA-BFBD-5B1FBEADFB1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvilPlanner.Frontend", "EvilPlanner.Frontend\EvilPlanner.Frontend.csproj", "{17D1661D-128F-4AD4-AE89-2A93D3D033AB}"
-EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EvilPlanner.Next", "EvilPlanner.Next\EvilPlanner.Next.xproj", "{A2D26CDB-3CAC-4A39-B68D-96CD654D9278}"
 EndProject
 Global
@@ -46,10 +44,6 @@ Global
 		{67FDBABF-7E9D-4CDA-BFBD-5B1FBEADFB1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67FDBABF-7E9D-4CDA-BFBD-5B1FBEADFB1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67FDBABF-7E9D-4CDA-BFBD-5B1FBEADFB1B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17D1661D-128F-4AD4-AE89-2A93D3D033AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17D1661D-128F-4AD4-AE89-2A93D3D033AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17D1661D-128F-4AD4-AE89-2A93D3D033AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17D1661D-128F-4AD4-AE89-2A93D3D033AB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A2D26CDB-3CAC-4A39-B68D-96CD654D9278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A2D26CDB-3CAC-4A39-B68D-96CD654D9278}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2D26CDB-3CAC-4A39-B68D-96CD654D9278}.Release|Any CPU.ActiveCfg = Release|Any CPU

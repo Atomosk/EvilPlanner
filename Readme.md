@@ -4,11 +4,13 @@ EvilPlanner is a nice statistical application.
 
 Features
 --------
+
 Currently it will only output the random quote from Evil Overlord List (see
 quotation source for every quote near the quote itself).
 
 Database Setup
 --------------
+
 EvilPlanner uses MS SQL for data storage. It will migrate its databases
 automatically if necessary.
 
@@ -22,6 +24,7 @@ By default EvilPlanner will use the default shared instance named
 debug and development purposes.
 
 ### Production
+
 It's recommended to use [MS SQL 2014 Express][mssql-express] for production. By
 default EvilPlanner will use `EvilPlanner` database on the `.\SQLEXPRESS`
 server.
@@ -41,6 +44,7 @@ IIS user the access to the database with the following script:
 
 Configuration
 -------------
+
 EvilPlanner uses [Web.config transformations][web-config-transform], so there
 is a basic `Web.config` file used for debug and `Web.Release.config` used for
 publishing. Be sure to make changes to an appropriate file!
@@ -60,10 +64,12 @@ compilation.
 
 Build and Deploy
 ----------------
+
 EvilPlanner consists of independent backend and frontend parts. They should be
 compiled and deployed separately.
 
 ### Backend
+
 You may compile and publish the code from Visual Studio, or using `msbuild`
 (assuming that you have both `nuget` and `msbuild` in your `PATH` environment
 variable):
@@ -72,34 +78,26 @@ variable):
     msbuild EvilPlanner.sln /p:Platform="Any CPU" /p:Configuration=Release /p:ProductionDeploy=true /p:PublishProfile=Production
 
 ### Frontend
+
 To compile frontend, you'll need a local npm installation. First of all,
 install used packages:
 
-    cd EvilPlanner.Frontend
+    cd EvilPlanner.Next
     npm install
 
-After that, you can compile code with Visual Studio (it will use the prodived
-`Gulpfile.js`) or from the command line:
+After that, you can compile code with either `npm run webpack` or [WebPack Task
+Runner][vs-webpack] extension for Visual Studio.
 
-    npm run build
+For deployment, you should use the following commands:
 
-#### Watch
-The `watch` task has been provided for the development purposes. Visual Studio
-will start it automatically; you also have an option to start it from the
-terminal:
-
-    npm run watch
-
-For production, you should use the following commands:
-
-    npm run clean
-    npm run deploy
-    cp -r -force ./dist/* $TargetPath
+    npm run webpack
+    cp -r -force ./wwwroot/* $TargetPath
 
 Frontend project may be deployed to any server.
 
 Creating Database Migration
 ---------------------------
+
 When developing, you'll often want to migrate your staging database.
 Unfortunately, there's a bug in Visual Studio that could prevent you from doing
 that in the standard way. So, if you want to create new migration, follow this
@@ -115,4 +113,5 @@ Note that it will use the connection string from an `App.config` file from the
 
 [mssql-express]: https://www.microsoft.com/en-US/download/details.aspx?id=42299
 [mssql-localdb]: https://msdn.microsoft.com/ru-ru/library/hh510202(v=sql.120).aspx
+[vs-webpack]: https://visualstudiogallery.msdn.microsoft.com/5497fd10-b1ba-474c-8991-1438ae47012a
 [web-config-transform]: http://www.asp.net/mvc/overview/deployment/visual-studio-web-deployment/web-config-transformations

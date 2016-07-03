@@ -1,0 +1,14 @@
+﻿{
+    "compilerOptions": {
+        "module": "commonjs",
+        "sourceMap": true,
+        "jsx": "react",
+        "moduleResolution": "node"
+    },
+    "files": [
+        "app.tsx",
+        "config.ts",
+        "quotation-block.tsx",
+        "typings/main.d.ts"
+    ]
+}
